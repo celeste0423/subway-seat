@@ -16,7 +16,7 @@ void main() async {
   );
   final plugin = GoogleSignInPlatform.instance as GoogleSignInPlugin;
   await plugin.init();
-  // //.env init
+  //.env init
   // await dotenv.load(fileName: ".env");
   //analytics
   Analytics().init();

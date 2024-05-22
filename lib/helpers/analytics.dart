@@ -10,7 +10,7 @@ class Analytics {
 
   Future<void> init() async {
     googleAnalytics.setAnalyticsCollectionEnabled(true);
-    amplitudeAnalytics.init('e0ce8fd6fc83abd8be70d7fb7583bab7');
+    // amplitudeAnalytics.init('e0ce8fd6fc83abd8be70d7fb7583bab7');
   }
 
   Future<void> logEvent(
@@ -23,8 +23,8 @@ class Analytics {
       parameters: parameters,
     );
     //aa
-    await amplitudeAnalytics.logEvent(name, eventProperties: parameters);
-    print('log 전송');
+    // await amplitudeAnalytics.logEvent(name, eventProperties: parameters);
+    // print('log 전송');
   }
 
   Future<void> logAppOpen() async {
