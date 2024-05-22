@@ -7,12 +7,8 @@ class GoogleLoginButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 400,
-      height: 100,
-      child: (GoogleSignInPlatform.instance as web.GoogleSignInPlugin)
-          .renderButton(),
-    );
+    return (GoogleSignInPlatform.instance as web.GoogleSignInPlugin)
+        .renderButton();
     // return GestureDetector(
     //   onTap: () async {
     //     print('구글 로그인 시도1');
