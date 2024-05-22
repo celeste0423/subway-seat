@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "297522624233",
+    "project_id": "subway-seat",
+    "storage_bucket": "subway-seat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:297522624233:android:13e698c849f47ed6a96278",
+        "android_client_info": {
+          "package_name": "com.example.subway_seat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBi55CsQmTAnReNWKOidOFTboKADBWwRDw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
