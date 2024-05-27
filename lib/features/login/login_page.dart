@@ -39,21 +39,62 @@ class _LoginPageState extends State<LoginPage> {
     super.initState();
   }
 
+  Widget _content() {
+    return Expanded(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset('assets/icons/logo.png'),
+          SizedBox(height: 80),
+          RichText(
+            text: TextSpan(
+              style: TextStyle(
+                color: CustomColors.blackText,
+                fontWeight: FontWeight.bold,
+                height: 1.1,
+                fontSize: 30,
+              ),
+              children: [
+                TextSpan(
+                  text: '앉아서 출근할 준비되셨나요?',
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 30),
+          Text(
+            '좌석을 양보하고, 양보받고',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: CustomColors.greyText,
+              fontSize: 15,
+            ),
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          Text(
+            '로그인에 실패하신다면\n사파리나 크롬브라우저를 이용해주세요.',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: CustomColors.greyText,
+              fontSize: 15,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
   Widget loginTab() {
     return Container(
-      height: 150,
+      height: 200,
       width: double.infinity,
       padding: const EdgeInsets.all(20),
-      decoration: const BoxDecoration(
-        color: CustomColors.mainBlue,
-        borderRadius: BorderRadius.only(
-          topRight: Radius.circular(25),
-          topLeft: Radius.circular(25),
-        ),
-      ),
       child: Column(
         children: [
           GoogleLoginButton(),
+          SizedBox(height: 30),
           Visibility(
             visible: googleUser != null,
             child: const Padding(
@@ -72,7 +113,7 @@ class _LoginPageState extends State<LoginPage> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Expanded(child: SizedBox()),
+          _content(),
           loginTab(),
         ],
       ),

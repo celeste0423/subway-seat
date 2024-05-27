@@ -46,6 +46,7 @@ dependencies:
   amplitude_flutter: ^3.16.2
   flutter_dotenv: ^5.1.0
   http: ^1.2.1
+  uuid: ^4.4.0
 
 dev_dependencies:
   flutter_test:

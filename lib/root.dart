@@ -29,6 +29,7 @@ class Root extends GetView<AuthController> {
                       UserModel userData = UserModel(
                         uid: user.data!.uid,
                         email: user.data!.email,
+                        stamp: 3,
                         createdAt: DateTime.now(),
                       );
                       AuthController.to.signUp(userData);
