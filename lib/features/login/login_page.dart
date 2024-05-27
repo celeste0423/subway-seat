@@ -45,9 +45,9 @@ class _LoginPageState extends State<LoginPage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset('assets/icons/logo.png'),
-          SizedBox(height: 80),
+          const SizedBox(height: 80),
           RichText(
-            text: TextSpan(
+            text: const TextSpan(
               style: TextStyle(
                 color: CustomColors.blackText,
                 fontWeight: FontWeight.bold,
@@ -61,8 +61,8 @@ class _LoginPageState extends State<LoginPage> {
               ],
             ),
           ),
-          SizedBox(height: 30),
-          Text(
+          const SizedBox(height: 30),
+          const Text(
             '좌석을 양보하고, 양보받고',
             textAlign: TextAlign.center,
             style: TextStyle(
@@ -70,10 +70,10 @@ class _LoginPageState extends State<LoginPage> {
               fontSize: 15,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
-          Text(
+          const Text(
             '로그인에 실패하신다면\n사파리나 크롬브라우저를 이용해주세요.',
             textAlign: TextAlign.center,
             style: TextStyle(
@@ -93,8 +93,8 @@ class _LoginPageState extends State<LoginPage> {
       padding: const EdgeInsets.all(20),
       child: Column(
         children: [
-          GoogleLoginButton(),
-          SizedBox(height: 30),
+          const GoogleLoginButton(),
+          const SizedBox(height: 30),
           Visibility(
             visible: googleUser != null,
             child: const Padding(

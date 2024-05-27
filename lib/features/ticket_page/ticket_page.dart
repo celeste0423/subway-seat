@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:subway_seat/helpers/analytics.dart';
 import 'package:subway_seat/utils/custom_color.dart';
 
 class TicketPage extends StatelessWidget {
@@ -8,6 +9,7 @@ class TicketPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Analytics().logEvent('ticket_page_open', null);
     return Scaffold(
       appBar: AppBar(),
       backgroundColor: CustomColors.mainBlue,

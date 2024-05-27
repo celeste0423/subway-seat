@@ -24,7 +24,7 @@ class Analytics {
     );
     //aa
     // await amplitudeAnalytics.logEvent(name, eventProperties: parameters);
-    // print('log 전송');
+    print('log 전송');
   }
 
   Future<void> logAppOpen() async {

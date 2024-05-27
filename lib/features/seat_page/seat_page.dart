@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:subway_seat/features/ticket_page/ticket_page.dart';
+import 'package:subway_seat/helpers/analytics.dart';
 import 'package:subway_seat/helpers/open_alert_dialog.dart';
 import 'package:subway_seat/models/seat_model.dart';
 import 'package:subway_seat/repositories/seat_repository.dart';
@@ -243,6 +244,7 @@ class _StationPageState extends State<SeatPage> {
 
   @override
   Widget build(BuildContext context) {
+    Analytics().logEvent('seat_page_open', null);
     return Scaffold(
       appBar: _appBar(),
       body: Column(

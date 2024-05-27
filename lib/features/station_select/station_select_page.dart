@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'package:subway_seat/features/login/auth_controller.dart';
 import 'package:subway_seat/features/station_page/station_page.dart';
+import 'package:subway_seat/helpers/analytics.dart';
 import 'package:subway_seat/helpers/open_alert_dialog.dart';
 import 'package:subway_seat/utils/custom_color.dart';
 import 'package:subway_seat/widgets/title_text.dart';
@@ -7130,6 +7131,7 @@ class _StationSelectPageState extends State<StationSelectPage> {
 
   @override
   Widget build(BuildContext context) {
+    Analytics().logEvent('home_page_open', null);
     return Scaffold(
       appBar: _appBar(),
       body: Padding(

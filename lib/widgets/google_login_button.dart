@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_sign_in_platform_interface/google_sign_in_platform_interface.dart';
 import 'package:google_sign_in_web/google_sign_in_web.dart' as web;
+import 'package:subway_seat/helpers/analytics.dart';
 
 class GoogleLoginButton extends StatelessWidget {
   const GoogleLoginButton({super.key});
 
   @override
   Widget build(BuildContext context) {
+    Analytics().logEvent('login_page_open', null);
     return (GoogleSignInPlatform.instance as web.GoogleSignInPlugin)
         .renderButton();
     // return GestureDetector(
